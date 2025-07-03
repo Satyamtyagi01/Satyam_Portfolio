@@ -1,87 +1,820 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Satyam Tyagi - Data Analyst specializing in SQL, SAS, and Healthcare Analytics">
-  <meta property="og:title" content="Satyam Tyagi | Data Analyst Portfolio">
-  <meta property="og:description" content="Healthcare data analyst with expertise in SQL, SAS, and data automation">
-  <title>Satyam Tyagi | Data Analyst Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Satyam Tyagi - Data Analyst specializing in SQL, SAS, and Healthcare Analytics">
+<meta property="og:title" content="Satyam Tyagi | Data Analyst Portfolio">
+<meta property="og:description" content="Healthcare data analyst with expertise in SQL, SAS, and data automation">
+<title>Satyam Tyagi | Data Analyst Portfolio</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!-- Preload critical resources -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <style>
-    body {
-      background-color: #000;
-    }
+<style>
 
-    .section-page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8rem 2rem 6rem 2rem;
-      scroll-margin-top: 5rem;
-      gap: 2rem;
-    }
+/* Critical CSS - inlined for faster rendering */
+body {
+background-color: #000000;
+}
 
-    @keyframes typewriter-loop {
-      0% { width: 0 }
-      40% { width: 100% }
-      80% { width: 100% }
-      100% { width: 0 }
-    }
+.section-page {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 8rem 2rem 6rem 2rem; /* ↑↑ more top & bottom padding */
+scroll-margin-top: 5rem; /* ensures section links work correctly */
+gap: 2rem;
+}
 
-    .animate-loop-typewriter {
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: none;
-      width: 0;
-      animation: typewriter-loop 6s steps(50, end) infinite;
-    }
 
-    #typed-text {
-      display: inline-block;
-      min-width: 250px;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: #ccc;
-    }
+.section-page.visible {
+opacity: 1;
+transform: translateY(0);
+}
 
-    h1, h2, h3 {
-      word-break: break-word;
-    }
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
 
-    .tech-pill, .skill-chip, .tech-tag {
-      font-size: 0.875rem;
-      padding: 0.25rem 0.75rem;
-    }
-
-    .contact-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      .max-w-4xl, .max-w-6xl {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
-  </style>
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+</style>
 </head>
-<body>
-<!-- Original body content goes here (not altered in this step) -->
+
+<body class="text-gray-100 font-sans leading-relaxed">
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full h-16 bg-black bg-opacity-90 z-50 py-4 px-4 hidden md:block opacity-0 transform -translate-y-4 transition-all duration-700 ease-out">
+<div class="max-w-6xl mx-auto flex justify-end space-x-8 text-white text-sm font-medium">
+<a href="#about" class="relative group">
+About
+<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a href="#skills" class="relative group">
+Skills
+<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a href="#experience" class="relative group">
+Experience
+<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a href="#contact" class="relative group">
+Contact
+<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+</a>
+</div>
+</nav>
+
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section id="home" class="section-page relative overflow-hidden bg-cover bg-center"
+style="
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg');
+background-size: cover;
+background-position: center;
+">
+<div class="absolute inset-0 bg-black/40"></div>
+
+<div class="max-w-4xl mx-auto text-center px-4 py-16 relative z-10">
+<!-- Logo with Animation -->
+<div id="logo" class="mx-auto w-28 h-28 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-400 text-black text-4xl font-extrabold rounded-full shadow-lg mb-8 border-4 border-white transition-all duration-500 ease-in-out hover:scale-110 hover:rotate-6 cursor-pointer animate-logo" 
+aria-label="Satyam Tyagi Logo">
+ST
+</div>
+
+<!-- Animated Name -->
+<h1 class="text-5xl md:text-6xl font-bold mb-8 overflow-hidden">
+<span class="inline-block animate-name-reveal">
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Satyam Tyagi</span>
+</span>
+</h1>
+
+<!-- Animated Line -->
+<div class="w-64 h-1 bg-white rounded-full mx-auto mb-8 overflow-hidden relative">
+<div class="animate-line-expand absolute top-0 left-0 h-full bg-gradient-to-r from-blue-400 to-purple-500"></div>
+</div>
+
+<!-- Title -->
+<p class="text-xl md:text-2xl text-gray-300 mb-10 h-8 md:h-10">
+<span id="typed-text" class="inline-block"></span>
+</p>
+
+
+<!-- Location -->
+<div class="text-gray-400 animate-fade-in delay-400">
+<p>📍 Noida, India</p>
+</div>
+
+<!-- Enhanced CTA Button -->
+
+</div>
+</section>
+
+<style>
+/* Background Styles */
+.bg-cover {
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+/* Logo Animation */
+@keyframes logo-float {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-10px) rotate(3deg); }
+}
+.animate-logo {
+animation: logo-float 4s ease-in-out infinite;
+}
+
+/* Name Reveal Animation */
+@keyframes name-reveal {
+0% { 
+opacity: 0;
+transform: translateY(30px);
+filter: blur(10px);
+}
+100% { 
+opacity: 1;
+transform: translateY(0);
+filter: blur(0);
+}
+}
+.animate-name-reveal {
+animation: name-reveal 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Line Expand Animation */
+@keyframes line-expand {
+0% { 
+width: 0;
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% { 
+width: 100%;
+opacity: 1;
+}
+}
+.animate-line-expand {
+animation: line-expand 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Fade In Animation */
+@keyframes fade-in {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+animation: fade-in 0.8s ease-out forwards;
+opacity: 0;
+}
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Gradient Text Animation */
+.bg-gradient-to-r {
+background-size: 200% auto;
+animation: gradient-shift 5s ease infinite;
+}
+@keyframes gradient-shift {
+0% { background-position: 0% center; }
+50% { background-position: 100% center; }
+100% { background-position: 0% center; }
+}
+
+/* Enhanced Explore Button */
+.explore-btn {
+box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+.explore-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+</style>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+const nav = document.getElementById("navbar");
+nav.classList.remove("opacity-0", "-translate-y-4");
+nav.classList.add("opacity-100", "translate-y-0");
+});
+document.addEventListener("DOMContentLoaded", function () {
+const phrases = [
+"Associate Analyst",
+"SAS Expert",
+"SQL Specialist",
+"Healthcare Analyst"
+];
+
+const el = document.getElementById("typed-text");
+let phraseIndex = 0;
+let letterIndex = 0;
+let typing = true;
+
+function type() {
+const currentPhrase = phrases[phraseIndex];
+
+if (typing) {
+if (letterIndex <= currentPhrase.length) {
+el.textContent = currentPhrase.substring(0, letterIndex);
+letterIndex++;
+} else {
+typing = false;
+setTimeout(type, 1000); // wait before deleting
+return;
+}
+} else {
+if (letterIndex >= 0) {
+el.textContent = currentPhrase.substring(0, letterIndex);
+letterIndex--;
+} else {
+typing = true;
+phraseIndex = (phraseIndex + 1) % phrases.length;
+}
+}
+
+setTimeout(type, typing ? 100 : 50); // speed control
+}
+
+type();
+});
+document.addEventListener("DOMContentLoaded", typeEffect);
+
+document.addEventListener('DOMContentLoaded', function() {
+// Trigger animations when hero section is visible
+const heroSection = document.querySelector('#home');
+const animatedElements = heroSection.querySelectorAll('[class*="animate-"]');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+animatedElements.forEach(el => {
+const delay = el.classList.contains('delay-200') ? 200 :
+el.classList.contains('delay-400') ? 400 :
+el.classList.contains('delay-600') ? 600 : 0;
+setTimeout(() => {
+el.style.opacity = '1';
+if (el.classList.contains('animate-line-expand')) {
+el.style.width = '100%';
+}
+}, delay);
+});
+observer.unobserve(heroSection);
+}
+});
+}, { threshold: 0.1 });
+
+observer.observe(heroSection);
+});
+</script>
+<!-- About Section -->
+<!-- About Section -->
+<!-- About Section -->
+<!-- About Section -->
+<!-- About Section -->
+<!-- About Section -->
+<section id="about" class="section-page" style="
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg');
+background-size: cover;
+background-position: center;
+">
+<div class="max-w-4xl mx-auto">
+<div class="bg-grey-900 p-8 rounded-xl shadow-lg text-gray-300 border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<!-- Heading with Restored Animated Line -->
+<div class="mb-6">
+<h2 class="text-3xl font-bold text-white">About Me</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-line-expand mt-2"></div>
+</div>
+
+<div class="prose prose-invert max-w-none">
+<p class="mb-4">
+I am a passionate data professional with expertise in both data analysis and data engineering. With my B.Tech in Information Technology from College of Engineering Roorkee and professional experience at Wipro Limited, I specialize in transforming raw data into actionable business intelligence.
+</p>
+
+<!-- Resume Download Button -->
+<div class="mb-6 flex justify-center">
+<a href="Satyam_Tyagi_Resume.pdf" download 
+class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition transform hover:scale-105 inline-flex items-center">
+<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+</svg>
+Download Resume
+</a>
+</div>
+
+<!-- Professional Highlights -->
+<div class="mb-6 p-4 bg-black rounded-lg border border-gray-700">
+<h3 class="text-xl font-semibold text-blue-300 mb-3">Professional Highlights</h3>
+<ul class="space-y-3 pl-5 list-disc marker:text-blue-400">
+<li>Associate Analyst at Wipro Limited (May 2022 - Present)</li>
+<li>Led Annual Enrollment 2025 project processing 2M+ healthcare records</li>
+<li>Developed reusable SAS macros reducing processing time by 40%</li>
+<li>Automated 70% of ACA compliance checks using SAS and SQL</li>
+<li>Built Python scripts that reduced payroll analysis time by 60%</li>
+<li>Mentored 5 junior analysts in healthcare data standards</li>
+</ul>
+</div>
+
+<p class="mb-4 font-medium text-gray-200">
+My dual expertise includes:
+</p>
+
+<ul class="list-disc pl-6 mb-6 space-y-2 marker:text-blue-400">
+<li class="text-gray-300">
+<span class="font-semibold text-blue-400">Data Analysis:</span> Healthcare compliance analytics, automated reporting, data visualization
+</li>
+<li class="text-gray-300">
+<span class="font-semibold text-purple-400">Data Engineering:</span> ETL pipelines, workflow optimization, scalable architectures
+</li>
+</ul>
+
+<p class="mb-4">
+I'm currently expanding my skills in:
+</p>
+
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="tech-pill">Apache Airflow</span>
+<span class="tech-pill">Spark</span>
+<span class="tech-pill">Snowflake</span>
+<span class="tech-pill">dbt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+.tech-pill {
+@apply bg-gray-800 text-blue-300 px-3 py-1 rounded-full text-sm border border-gray-700;
+@apply hover:bg-gray-700 hover:text-blue-200 transition-colors;
+}
+
+@keyframes line-expand {
+from { transform: scaleX(0) }
+to { transform: scaleX(1) }
+}
+
+.animate-line-expand {
+animation: line-expand 0.8s ease-out forwards;
+transform-origin: left;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Trigger line animation when about section is visible
+const aboutSection = document.querySelector('#about');
+const lineElement = aboutSection.querySelector('.animate-line-expand');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+lineElement.style.opacity = '1';
+}
+});
+}, { threshold: 0.1 });
+
+observer.observe(aboutSection);
+});
+</script>
+<!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" class="section-page" style="
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg');
+background-size: cover;
+background-position: center;
+">
+<div class="max-w-4xl mx-auto">
+<div class="bg-grey-900 p-8 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<!-- Animated Heading with Line -->
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-white inline-block">Technical Skills</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-line-expand mt-2"></div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+<!-- Core Technologies -->
+<div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<h3 class="text-xl font-semibold mb-4 text-white">Core Technologies</h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">SQL</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">SAS</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Python</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">DB2</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">JCL</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">MongoDB</span>
+</div>
+</div>
+
+<!-- Tools & Platforms -->
+<div class="bg-black p-6 rounded-lg border border-grey-700 hover:border-blue-400 transition-all duration-300">
+<h3 class="text-xl font-semibold mb-4 text-white">Tools & Platforms</h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Jira</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Git</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Excel</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Tableau</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Power BI</span>
+</div>
+</div>
+
+<!-- Methodologies -->
+<div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<h3 class="text-xl font-semibold mb-4 text-white">Methodologies</h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Data Modeling</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">ETL Processes</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Data Visualization</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Statistical Analysis</span>
+</div>
+</div>
+
+<!-- Industry Domains -->
+<div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<h3 class="text-xl font-semibold mb-4 text-white">Industry Domains</h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Healthcare Analytics</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Compliance Reporting</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Payroll Systems</span>
+<span class="skill-chip hover:bg-blue-900/30 hover:border-blue-400">Insurance Data</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+.skill-chip {
+@apply bg-gray-700 text-blue-300 px-3 py-1 rounded-full text-sm border border-gray-600;
+@apply transition-all duration-300;
+}
+
+/* Reuse the line-expand animation from other sections */
+@keyframes line-expand {
+from { transform: scaleX(0) }
+to { transform: scaleX(1) }
+}
+
+.animate-line-expand {
+animation: line-expand 0.8s ease-out forwards;
+transform-origin: left;
+}
+</style>
+
+<!-- Experience Section -->
+<!-- Experience Section -->
+<!-- Experience Section -->
+<section id="experience" class="section-page"
+style="
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg');
+background-size: cover;
+background-position: center;
+">
+<div class="max-w-4xl mx-auto">
+<div class="bg-grey-900 p-8 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<!-- Heading with Animated Line Inside Box -->
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-white inline-block">Experience</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-line-expand mt-2"></div>
+</div>
+
+<div class="space-y-8">
+<!-- Wipro Experience -->
+<div class="bg-black p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold text-white">Wipro Limited, Noida</h3>
+<p class="text-purple-300">Associate Analyst | May 2022 – Present</p>
+</div>
+<div class="flex flex-wrap gap-2 mt-3 md:mt-0">
+<span class="tech-tag">SAS</span>
+<span class="tech-tag">SQL</span>
+<span class="tech-tag">DB2</span>
+<span class="tech-tag">Python</span>
+</div>
+</div>
+
+<!-- Annual Enrollment Project -->
+<div class="mb-6 pl-4 border-l-4 border-blue-500">
+<h4 class="text-lg font-semibold text-blue-300 mb-2">Annual Enrollment 2025</h4>
+<p class="text-gray-400 mb-3">Managed healthcare benefits enrollment for Fortune 40+ clients with 100% accuracy</p>
+<ul class="space-y-2 pl-5 list-disc marker:text-blue-400">
+<li class="text-gray-300">Led end-to-end data processing for 2M+ employee records with SAS and SQL</li>
+<li class="text-gray-300">Developed reusable SAS macros that reduced processing time by 40%</li>
+<li class="text-gray-300">Implemented automated compliance checks that eliminated manual validation errors</li>
+</ul>
+</div>
+
+<!-- ACA Project -->
+<div class="mb-6 pl-4 border-l-4 border-purple-500">
+<h4 class="text-lg font-semibold text-purple-300 mb-2">Affordable Care Act Compliance</h4>
+<p class="text-gray-400 mb-3">Streamlined ACA reporting workflows for American health programs</p>
+<ul class="space-y-2 pl-5 list-disc marker:text-purple-400">
+<li class="text-gray-300">Automated 70% of compliance checks using SAS macros and SQL queries</li>
+<li class="text-gray-300">Reduced reporting errors by 35% through enhanced data validation processes</li>
+</ul>
+</div>
+
+<!-- Payroll Project -->
+<div class="pl-4 border-l-4 border-green-500">
+<h4 class="text-lg font-semibold text-green-300 mb-2">Payroll Insights Automation</h4>
+<p class="text-gray-400 mb-3">Developed automated payroll reconciliation for 100K+ employees</p>
+<ul class="space-y-2 pl-5 list-disc marker:text-green-400">
+<li class="text-gray-300">Built Python scripts that reduced payroll variance analysis time by 60%</li>
+<li class="text-gray-300">Created automated control reports that detected 98% of deduction anomalies</li>
+</ul>
+</div>
+</div>
+
+</section>
+<style>
+.tech-tag {
+@apply bg-gray-700 text-blue-300 px-3 py-1 rounded-full text-xs border border-gray-600;
+@apply hover:bg-blue-900 hover:text-blue-100 transition-colors;
+}
+
+@keyframes line-expand {
+from { transform: scaleX(0) }
+to { transform: scaleX(1) }
+}
+
+.animate-line-expand {
+animation: line-expand 0.8s ease-out forwards;
+transform-origin: left;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Trigger line animation when experience section is visible
+const experienceSection = document.querySelector('#experience');
+const lineElement = experienceSection.querySelector('.animate-line-expand');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+lineElement.style.opacity = '1';
+}
+});
+}, { threshold: 0.1 });
+
+observer.observe(experienceSection);
+});
+</script>
+
+<!-- Education -->
+<!-- Education Section -->
+<!-- Education Section -->
+<section id="education" class="section-page" style="
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg');
+background-size: cover;
+background-position: center;
+">
+<div class="max-w-4xl mx-auto">
+<div class="bg-grey-900 p-8 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<!-- Animated Heading with Line -->
+<div class="mb-6">
+<h2 class="text-3xl font-bold text-white inline-block">Education</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-line-expand mt-2"></div>
+</div>
+
+<div class="space-y-6">
+<!-- College Entry -->
+<div class="bg-grey-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">College of Engineering Roorkee (COER)</h3>
+<p class="text-gray-400 mt-1">July 2018 – July 2022</p>
+</div>
+<div class="mt-3 md:mt-0">
+<span class="inline-block bg-blue-900/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+B.Tech in IT
+</span>
+</div>
+</div>
+
+<ul class="mt-4 space-y-2 pl-5 list-disc marker:text-blue-400">
+<li class="text-gray-300">Specialized in Database Systems and Data Structures</li>
+<li class="text-gray-300">Coursework: Advanced SQL, Data Mining, Big Data Analytics</li>
+<li class="text-gray-300">Graduated with First Class Honors</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+@keyframes line-expand {
+from { transform: scaleX(0) }
+to { transform: scaleX(1) }
+}
+
+.animate-line-expand {
+animation: line-expand 0.8s ease-out forwards;
+transform-origin: left;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Trigger line animation when education section is visible
+const educationSection = document.querySelector('#education');
+const lineElement = educationSection.querySelector('.animate-line-expand');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+lineElement.style.opacity = '1';
+}
+});
+}, { threshold: 0.1 });
+
+observer.observe(educationSection);
+});
+</script>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="section-page" >
+<div class="max-w-4xl mx-auto text-center">
+<div class="bg-grey-900 p-8 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300">
+<h2 class="text-3xl font-bold mb-8 text-white-400">Get In Touch</h2>
+
+<p class="mb-6 text-lg">Feel free to reach out through any of these channels:</p>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Email Card -->
+<a href="mailto:satyamtyagi9955@gmail.com" 
+class="contact-card group transition-all duration-300 hover:border-blue-400">
+<div class="contact-icon bg-blue-900/30 group-hover:bg-blue-900/50">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+</svg>
+</div>
+<h3 class="text-lg font-medium mt-3">Email</h3>
+<p class="text-gray-400 mt-1">satyamtyagi9955@gmail.com</p>
+<p class="text-blue-300 mt-2 text-sm group-hover:text-blue-400">Click to compose email</p>
+</a>
+
+<!-- Phone Card -->
+<a href="tel:+919027702092" 
+class="contact-card group transition-all duration-300 hover:border-blue-400">
+<div class="contact-icon bg-blue-900/30 group-hover:bg-blue-900/50">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+</svg>
+</div>
+<h3 class="text-lg font-medium mt-3">Phone</h3>
+<p class="text-gray-400 mt-1">+91 90277 02092</p>
+<p class="text-blue-300 mt-2 text-sm group-hover:text-blue-400">Click to call directly</p>
+</a>
+
+<!-- LinkedIn Card -->
+<a href="https://www.linkedin.com/in/satyam-tyagi-380954213" 
+target="_blank" rel="noopener noreferrer"
+class="contact-card group transition-all duration-300 hover:border-blue-400">
+<div class="contact-icon bg-blue-900/30 group-hover:bg-blue-900/50">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+</svg>
+</div>
+<h3 class="text-lg font-medium mt-3">LinkedIn</h3>
+<p class="text-gray-400 mt-1">Satyam Tyagi</p>
+<p class="text-blue-300 mt-2 text-sm group-hover:text-blue-400">Connect professionally</p>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+.contact-card {
+@apply bg-gray-800 p-6 rounded-lg border border-gray-700 flex flex-col items-center text-center;
+@apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/10;
+}
+
+.contact-icon {
+@apply w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300;
+}
+
+/* Hover effects */
+#contact > div > div:hover {
+border-color: #60a5fa; /* blue-400 */
+box-shadow: 0 0 0 1px #60a5fa;
+}
+
+.contact-card:hover {
+transform: translateY(-3px);
+border-color: #60a5fa;
+box-shadow: 0 10px 15px -3px rgba(96, 165, 250, 0.1), 
+0 4px 6px -2px rgba(96, 165, 250, 0.05);
+}
+</style>
+<!-- Footer -->
+<footer class="py-8 bg-black text-center text-gray-400 text-sm">
+<div class="max-w-4xl mx-auto px-4">
+<p>© <span id="year"></span> Satyam Tyagi. All rights reserved.</p>
+<p class="mt-2">Built with ❤️ using HTML, CSS, and JavaScript</p>
+</div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-8 right-8 bg-gray-800 bg-opacity-80 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-600">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+</svg>
+</button>
+
+<style>
+/* Component-specific styles */
+.skill-chip {
+@apply bg-gray-800 text-blue-300 px-3 py-1 rounded-full text-sm;
+}
+
+.tech-tag {
+@apply bg-blue-900 bg-opacity-50 text-blue-300 px-2 py-1 rounded text-xs;
+}
+
+.prose-invert a {
+@apply text-blue-400 hover:text-blue-300 underline;
+}
+
+/* Animation classes */
+.animate-fadeIn {
+animation: fadeIn 1s ease-out forwards;
+}
+</style>
+
+<script>
+// Simplified Intersection Observer
+document.addEventListener('DOMContentLoaded', () => {
+// Set current year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Section animations
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section-page').forEach(section => {
+observer.observe(section);
+});
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTop.classList.remove('opacity-0', 'invisible');
+backToTop.classList.add('opacity-100', 'visible');
+} else {
+backToTop.classList.remove('opacity-100', 'visible');
+backToTop.classList.add('opacity-0', 'invisible');
+}
+});
+
+backToTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Logo animation
+const logo = document.getElementById('logo');
+logo.addEventListener('click', () => {
+logo.classList.add('animate-pulse');
+setTimeout(() => logo.classList.remove('animate-pulse'), 1000);
+});
+});
+</script>
 </body>
 </html>
