@@ -659,6 +659,20 @@ from { transform: scaleX(0) }
 to { transform: scaleX(1) }
 }
 
+  /* Make Education block taller */
+.education {
+  min-height: 350px;  /* makes it more rectangular */
+  padding: 20px;      /* adds breathing space inside */
+  box-sizing: border-box;
+}
+
+/* Optional: Make sure it stays nice on smaller screens */
+@media (max-width: 768px) {
+  .education {
+    min-height: auto; /* let it shrink naturally on mobile */
+  }
+}
+
 .animate-line-expand {
 animation: line-expand 0.8s ease-out forwards;
 transform-origin: left;
@@ -843,6 +857,7 @@ setTimeout(() => logo.classList.remove('animate-pulse'), 1000);
 </body>
 
 </html>
+
 
 
 
