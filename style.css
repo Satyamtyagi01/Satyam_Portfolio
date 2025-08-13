@@ -27,3 +27,19 @@ font-weight: 600;
 font-size: 1.5rem; /* or use text-xl via Tailwind */
 color: #ccc; /* adjust as needed */
 }
+
+/* Make Education block taller */
+.education {
+  min-height: 350px;  /* makes it more rectangular */
+  padding: 20px;      /* adds breathing space inside */
+  box-sizing: border-box;
+}
+
+/* Optional: Make sure it stays nice on smaller screens */
+@media (max-width: 768px) {
+  .education {
+    min-height: auto; /* let it shrink naturally on mobile */
+  }
+}
+
+
