@@ -28,30 +28,21 @@ font-size: 1.5rem; /* or use text-xl via Tailwind */
 color: #ccc; /* adjust as needed */
 }
 
-/* Make the whole Education section taller */
-#education {
-  padding-top: 80px;       /* space above the card */
-  padding-bottom: 80px;    /* space below the card */
-}
-
-/* Make the Education card itself taller */
+/* Override for Education section only */
 #education.section-page {
-  justify-content: flex-start;   /* push content to top instead of centering */
-  padding-top: 6rem;             /* more space above */
-  padding-bottom: 6rem;          /* more space below */
-  min-height: auto;              /* let it grow with content */
+  justify-content: flex-start;   /* Push content to top instead of center */
+  padding-top: 6rem;             /* Space above */
+  padding-bottom: 6rem;          /* Space below */
+  min-height: auto;              /* Let height grow with content */
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  #education {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  #education .bg-grey-900 {
-    min-height: auto;
-  }
+/* Make the Education card taller */
+#education .bg-grey-900 {
+  min-height: 400px;  /* Adjust as needed */
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 
 
 
