@@ -35,10 +35,11 @@ color: #ccc; /* adjust as needed */
 }
 
 /* Make the Education card itself taller */
-#education .bg-grey-900 {
-  min-height: 350px;       /* card height */
-  padding: 20px;           /* breathing room inside */
-  box-sizing: border-box;
+#education.section-page {
+  justify-content: flex-start;   /* push content to top instead of centering */
+  padding-top: 6rem;             /* more space above */
+  padding-bottom: 6rem;          /* more space below */
+  min-height: auto;              /* let it grow with content */
 }
 
 /* Mobile adjustments */
@@ -51,6 +52,7 @@ color: #ccc; /* adjust as needed */
     min-height: auto;
   }
 }
+
 
 
 
