@@ -5,6 +5,12 @@
 100% { width: 0 }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 .animate-loop-typewriter {
 display: inline-block;
 overflow: hidden;
@@ -42,6 +48,7 @@ color: #ccc; /* adjust as needed */
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 
 
