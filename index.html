@@ -103,6 +103,11 @@ Experience
 <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
 </a>
 <a href="#contact" class="relative group">
+Education
+<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a href="#contact" class="relative group">
+
 Contact
 <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
 </a>
@@ -877,7 +882,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       let target = this.getAttribute("href");
-      smoothScroll(target, 1200); // 👈 2500ms = 2.5s super smooth glide
+      smoothScroll(target, 1000); // 👈 2500ms = 2.5s super smooth glide
     });
   });
 });
@@ -887,6 +892,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </body>
 
 </html>
+
 
 
 
