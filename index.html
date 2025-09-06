@@ -801,7 +801,8 @@ box-shadow: 0 10px 15px -3px rgba(96, 165, 250, 0.1),
 animation: fadeIn 1s ease-out forwards;
 }
 </style>
-<script>
+
+  <script>
 // Simplified Intersection Observer
 document.addEventListener('DOMContentLoaded', () => {
   // Set current year in footer
@@ -876,15 +877,17 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       let target = this.getAttribute("href");
-      smoothScroll(target, 1500); // 👈 1500ms = 1.5s, increase for slower
+      smoothScroll(target, 2500); // 👈 2500ms = 2.5s super smooth glide
     });
   });
 });
 </script>
 
+
 </body>
 
 </html>
+
 
 
 
