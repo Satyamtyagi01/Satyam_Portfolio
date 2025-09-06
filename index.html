@@ -12,6 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 background-color: #000;
 }
@@ -796,53 +801,91 @@ box-shadow: 0 10px 15px -3px rgba(96, 165, 250, 0.1),
 animation: fadeIn 1s ease-out forwards;
 }
 </style>
-
 <script>
 // Simplified Intersection Observer
 document.addEventListener('DOMContentLoaded', () => {
-// Set current year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-// Section animations
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-}
-});
-}, { threshold: 0.1 });
+  // Section animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
 
-document.querySelectorAll('.section-page').forEach(section => {
-observer.observe(section);
-});
+  document.querySelectorAll('.section-page').forEach(section => {
+    observer.observe(section);
+  });
 
-// Back to top button
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-backToTop.classList.remove('opacity-0', 'invisible');
-backToTop.classList.add('opacity-100', 'visible');
-} else {
-backToTop.classList.remove('opacity-100', 'visible');
-backToTop.classList.add('opacity-0', 'invisible');
-}
-});
+  // Back to top button
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTop.classList.remove('opacity-0', 'invisible');
+      backToTop.classList.add('opacity-100', 'visible');
+    } else {
+      backToTop.classList.remove('opacity-100', 'visible');
+      backToTop.classList.add('opacity-0', 'invisible');
+    }
+  });
 
-backToTop.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-// Logo animation
-const logo = document.getElementById('logo');
-logo.addEventListener('click', () => {
-logo.classList.add('animate-pulse');
-setTimeout(() => logo.classList.remove('animate-pulse'), 1000);
-});
+  // Logo animation
+  const logo = document.getElementById('logo');
+  logo.addEventListener('click', () => {
+    logo.classList.add('animate-pulse');
+    setTimeout(() => logo.classList.remove('animate-pulse'), 1000);
+  });
+
+  // ----------------------------
+  // Smooth scroll for nav links
+  // ----------------------------
+  function smoothScroll(target, duration) {
+    let targetEl = document.querySelector(target);
+    if (!targetEl) return;
+    let targetPosition = targetEl.getBoundingClientRect().top + window.scrollY;
+    let startPosition = window.scrollY;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      let timeElapsed = currentTime - startTime;
+      let run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  // Attach smooth scroll to all nav links
+  document.querySelectorAll("a[href^='#']").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      let target = this.getAttribute("href");
+      smoothScroll(target, 1500); // 👈 1500ms = 1.5s, increase for slower
+    });
+  });
 });
 </script>
+
 </body>
 
 </html>
+
 
 
 
