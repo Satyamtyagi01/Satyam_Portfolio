@@ -5,10 +5,8 @@
 100% { width: 0 }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto !important;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 .animate-loop-typewriter {
@@ -48,6 +46,7 @@ color: #ccc; /* adjust as needed */
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 
 
